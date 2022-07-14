@@ -83,7 +83,6 @@ def get_code_df(df, title_column, sector_column, description_column):
         sector_column=sector_column,
         description_column=description_column
     )
-    #print('aca esta')
     # print(df)
 
     # with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
