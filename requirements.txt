@@ -1,0 +1,12 @@
+gensim
+numpy
+pillow
+emoji
+spacy
+wordcloud
+unidecode
+STOP_WORDS
+sklearn
+nltk
+fuzzywuzzy
+bs4
