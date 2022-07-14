@@ -37,18 +37,18 @@ website <https://www.ons.gov.uk/methodology/classificationsandstandards/standard
 
 2. Creating and activating a virtual environment is recommended in the terminal
 
-### Windows:
-```cmd
-    pip install virtualenv
-    python -m venv venv
-    venv/Scripts/activate
-```
-
 ### Mac:
 ```cmd
     pip install virtualenv
     virtualenv venv
     source venv/bin/activate
+```
+
+### Windows:
+```cmd
+    pip install virtualenv
+    python -m venv venv
+    venv/Scripts/activate
 ```
 
 Then execute set up of the package in terminal:
@@ -100,7 +100,6 @@ File and folder description
 -  ``cleaning-retrieving-occ-code/occupationcoder/tests/test_vacancies.csv`` contains 'test' vacancies 
    to run the code on, used by unittests, accessible by you!
 -  ``cleaning-retrieving-occ-code/occupationcoder/new_main_.py`` is the main script to run the program
-
 
 ---------------------------------------------------------------------------------------
 
