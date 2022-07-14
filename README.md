@@ -15,26 +15,24 @@ be found on `the ONS'
 website <https://www.ons.gov.uk/methodology/classificationsandstandards/standardoccupationalclassificationsoc/soc2010>`.
 
 
-
 ## Changes
 
-   -Addresses debugging and installation issues when running from terminal
+   -Addresses debugging and installation issues when running from terminal. 
+
+   -Fix debugging issues when importing datasets in format different from .csv (like .dta)
 
    -Creation of requirement file to import necessary packages to run the algorithm smoothly
 
    -Creation of program that exports SOCcode into a .csv file after aplying an extensive text cleaning function that addresses issues related to HTML text encoding.
 
-   -User-friendly syntaxis for arguments on input and output datasets.
+   -User-friendly syntaxis; just need to provide the necessary arguments for input and output datasets.
 
-   -Flexibility on variable names for job_description, job_title and job_sector
+   -Flexibility on variable names for job_description, job_title and job_sector to apply the function.
 
 
 ## Installation via terminal
 
 1. Clone this repository on your desired root folder. Open terminal and set path
-```cmd
-   cd <path repo>
-```
 
 
 2. Creating and activating a virtual environment is recommended in the terminal
@@ -53,7 +51,7 @@ website <https://www.ons.gov.uk/methodology/classificationsandstandards/standard
     source venv/bin/activate
 ```
 
-Then execute set up of the package in terminal:
+Then execute set up of the package in termina:
 
 ```cmd
     python setup.py sdist
@@ -68,17 +66,17 @@ package. The version number to use will be evident from the name of the
 .tar.gz file.
 
 
-And install extra dependencies in root folder as follows:
+And install extra dependencies in root folder after establishing path, as follows:
 ```cmd
-    cd ..
+    cd <path repo>
     pip install -r requirements.txt
 ```
 
-## How to use:
+## How to use program:
 
-After the installation, you can open a terminal and execute the program :
+After the installation in the terminal; user just needs to execute
 ```cmd
-    python main.py <input_file_path> <output_file_path> <title_column> <sector_column> <description_column>
+    python new_main.py <input_file_path> <output_file_path> <title_column> <sector_column> <description_column>
 ```
 
 Where title_column, sector_column and description_column are optional. If these arguments are not included, the default values will be 'job_title', 'job_sector' and 'job_description' respectively.
@@ -88,33 +86,20 @@ The output file will be accesible in the specified path and it will be a new dat
 Necessary to provide the path for input dataset with text and the desired path for output dataset
 
 
-Pre-requisites
-~~~~~~~~~~~~~~
-
-occupationcoder is built on top of `NLTK <http://www.nltk.org/>`__ and
-uses 'Wordnet' (a corpora, number 82 on their list) and the Punkt
-Tokenizer Models (number 106 on their list). When the coder is run, it
-will expect to find these in their usual directories. If you have nltk
-installed, you can get them corpora using ``nltk.download()`` which will
-install them in the right directories or you can go to
-`http://www.nltk.org/nltk_data/ <http://www.nltk.org/nltk_data/>`__ to
-download them manually (and follow the install instructions).
-
-
 File and folder description
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  ``occupationcoder/coder.py`` applies SOC codes to job descriptions
--  ``occupationcoder/cleaner.py`` contains helper function which mostly
+-  ``cleaning-retrieving-occ-code/occupationcoder/coder.py`` applies SOC codes to job descriptions
+-  ``cleaning-retrieving-occ-code/occupationcoder/cleaner.py`` contains helper function which mostly
    manipulate strings
--  ``occupationcoder/createdictionaries`` turns the ONS' index of SOC
+-  `cleaning-retrieving-occ-code/`occupationcoder/createdictionaries`` turns the ONS' index of SOC
    code into dictionaries used by ``occupationcoder/coder.py``
--  ``occupationcoder/dictionaries`` contains the dictionaries used by
-   ``occupationcoder/coder.py``
--  ``occupationcoder/outputs`` is the default output directory
--  ``occupationcoder/tests/test_vacancies.csv`` contains 'test' vacancies 
+-  ``cleaning-retrieving-occ-code/occupationcoder/dictionaries`` contains the dictionaries used by
+   ``cleaning-retrieving-occ-code/occupationcoder/coder.py``
+-  ``cleaning-retrieving-occ-code/occupationcoder/outputs`` is the default output directory
+-  ``cleaning-retrieving-occ-code/occupationcoder/tests/test_vacancies.csv`` contains 'test' vacancies 
    to run the code on, used by unittests, accessible by you!
-
+-  ``cleaning-retrieving-occ-code/occupationcoder/new_main_.py`` is the main script to run the program 
 
 
 ---------------------------------------------------------------------------------------
