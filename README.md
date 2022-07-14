@@ -51,7 +51,7 @@ website <https://www.ons.gov.uk/methodology/classificationsandstandards/standard
     source venv/bin/activate
 ```
 
-Then execute set up of the package in termina:
+Then execute set up of the package in terminal:
 
 ```cmd
     python setup.py sdist
@@ -66,7 +66,7 @@ package. The version number to use will be evident from the name of the
 .tar.gz file.
 
 
-And install extra dependencies in root folder after establishing path, as follows:
+And install extra dependencies (package requirements) in root folder after establishing path, as follows:
 ```cmd
     cd <path repo>
     pip install -r requirements.txt
