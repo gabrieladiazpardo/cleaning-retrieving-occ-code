@@ -99,7 +99,7 @@ File and folder description
 -  ``cleaning-retrieving-occ-code/occupationcoder/outputs`` is the default output directory
 -  ``cleaning-retrieving-occ-code/occupationcoder/tests/test_vacancies.csv`` contains 'test' vacancies 
    to run the code on, used by unittests, accessible by you!
--  ``cleaning-retrieving-occ-code/occupationcoder/new_main_.py`` is the main script to run the program 
+-  ``cleaning-retrieving-occ-code/occupationcoder/new_main_.py`` is the main script to run the program
 
 
 ---------------------------------------------------------------------------------------
