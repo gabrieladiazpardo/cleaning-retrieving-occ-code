@@ -105,7 +105,7 @@ if __name__ == "__main__":
     description_column = 'job_description'
 
     # If the user choose to override the values
-    if len(sys.argv) > 2:
+    if len(sys.argv) > 3:
         title_column = sys.argv[3]
         sector_column = sys.argv[4]
         description_column = sys.argv[5]
@@ -122,5 +122,8 @@ if __name__ == "__main__":
 #python main.py <input_file_path> <output_file_path> <title_column> <sector_column> <description_column>
 
 #Input:
-#python new_main.py './jobs_py.dta' 'output.txt' 'job_title' 'job_sector' 'job_description'
+
+#python new_main.py '/Users/Gabriela/Dropbox/PK_FLFP/Data/Rozee/finals/jobs_py.dta' '/Users/Gabriela/Dropbox/PK_FLFP/Data/Rozee/finals/jobs_py_withcode.csv' 'job_title' 'job_sector' 'job_description'
+
+#python new_main.py '/Users/Gabriela/Dropbox/PK_FLFP/Data/Rozee/finals/jobs_py.dta' '/Users/Gabriela/Dropbox/PK_FLFP/Data/Rozee/finals/jobs_py_withcode.csv'
 
