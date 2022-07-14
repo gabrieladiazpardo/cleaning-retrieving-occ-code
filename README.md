@@ -1,29 +1,43 @@
 # Cleaning and Retrieving Occupational Codes
 
-This is a branch created based on the code originally written by Jyldyz Djumalieva, `Arthur
-Turrell <http://aeturrell.github.io/home>`__, David Copple, James
-Thurgood, and Bradley Speigner; and upon the efficiency changes made by Martin Wood <http://MartinWoodONS.github.io>
+This is a branch addressing some bug issues when importing and using the 'occupationalcode' package. It creates a program that exports Job Codes on CSV format after applying a comprehensive text cleaning function over variables in the data.
 
-Aim:  Given a job title, job description, and job sector the algorithm assigns
-a UK 3-digit standard occupational classification (SOC) code to the job.
+The program included here is based on the algorithm originally written by Jyldyz Djumalieva, `Arthur
+Turrell <http://aeturrell.github.io/home>`, David Copple, James
+Thurgood, and Bradley Speigner; and upon the efficiency changes made by  `Martin Wood <MartinWoodONS.github.io>`. 
+
+## Aim
+
+Create a dataset exporting a UK 3-digit standard occupational classification (SOC), given a job title, job description, and job sector.
+
 The algorithm uses the **SOC 2010** standard, more details of which can
 be found on `the ONS'
-website <https://www.ons.gov.uk/methodology/classificationsandstandards/standardoccupationalclassificationsoc/soc2010>`__.
+website <https://www.ons.gov.uk/methodology/classificationsandstandards/standardoccupationalclassificationsoc/soc2010>`.
 
 
-CHANGES:
-    .Fixes debugging problems when importing values from a dataset
-    .Includes file of package requirements
-    .Comprehensive cleaning program over job description, job title and job sector, inclufing cleaning features for HTML text 
-    .Replicability for any arguments for input and output data
-    .Flexibility on any variable names for job description, job title and job sector
+
+## Changes
+
+   -Addresses debugging and installation issues when running from terminal
+
+   -Creation of requirement file to import necessary packages to run the algorithm smoothly
+
+   -Creation of program that exports SOCcode into a .csv file after aplying an extensive text cleaning function that addresses issues related to HTML text encoding.
+
+   -User-friendly syntaxis for arguments on input and output datasets.
+
+   -Flexibility on variable names for job_description, job_title and job_sector
 
 
 ## Installation via terminal
 
-First of all, clone this repo and navigate to the root folder.
+1. Clone this repository on your desired root folder. Open terminal and set path
+```cmd
+   cd <path repo>
+```
 
-Creating and activating a virtual environment is recommended:
+
+2. Creating and activating a virtual environment is recommended in the terminal
 
 ### Windows:
 ```cmd
@@ -39,7 +53,7 @@ Creating and activating a virtual environment is recommended:
     source venv/bin/activate
 ```
 
-Then execute:
+Then execute set up of the package in terminal:
 
 ```cmd
     python setup.py sdist
@@ -62,14 +76,16 @@ And install extra dependencies in root folder as follows:
 
 ## How to use:
 
-After the installation you can open a terminal and execute next command:
+After the installation, you can open a terminal and execute the program :
 ```cmd
     python main.py <input_file_path> <output_file_path> <title_column> <sector_column> <description_column>
 ```
 
 Where title_column, sector_column and description_column are optional. If these arguments are not included, the default values will be 'job_title', 'job_sector' and 'job_description' respectively.
 
-The output file will be accesible in the specified path and it will be a new dataframe with SOC code entries appended in a new column.
+The output file will be accesible in the specified path and it will be a new dataframe with SOC code entries appended in a new column. 
+
+Necessary to provide the path for input dataset with text and the desired path for output dataset
 
 
 Pre-requisites
