@@ -40,7 +40,7 @@ website <https://www.ons.gov.uk/methodology/classificationsandstandards/standard
 ```
 
 
-2. Creating and activating a virtual environment is recommended in the terminal
+3. Creating and activating a virtual environment is recommended in the terminal
 
 ### Mac:
 ```cmd
@@ -56,7 +56,7 @@ website <https://www.ons.gov.uk/methodology/classificationsandstandards/standard
     venv/Scripts/activate
 ```
 
-Then execute set up of the package in terminal:
+4. Then execute set up of the package in terminal:
 
 ```cmd
     python setup.py sdist
@@ -71,7 +71,7 @@ package. The version number to use will be evident from the name of the
 .tar.gz file.
 
 
-And install extra dependencies (package requirements) in root folder after establishing path, as follows:
+5. Install extra dependencies (package requirements) in root folder after re-establishing path, as follows:
 ```cmd
     cd <path repo>
     pip install -r requirements.txt
