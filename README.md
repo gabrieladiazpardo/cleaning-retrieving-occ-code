@@ -32,7 +32,12 @@ website <https://www.ons.gov.uk/methodology/classificationsandstandards/standard
 
 ## Installation via terminal
 
-1. Clone this repository on your desired root folder. Open terminal and set path
+1. Clone this repository on your desired root folder. Open terminal 
+2. Set path to repo
+
+```cmd
+   cd <path to repo>
+```
 
 
 2. Creating and activating a virtual environment is recommended in the terminal
