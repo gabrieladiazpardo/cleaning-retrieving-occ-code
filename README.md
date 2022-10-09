@@ -55,7 +55,7 @@ Then execute set up of the package in terminal:
 
 ```cmd
     python setup.py sdist
-    cd sdist
+    cd <path to sdist>
     pip install occupationcoder-<version>.tar.gz
 ```
 
