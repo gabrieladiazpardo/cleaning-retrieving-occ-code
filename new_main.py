@@ -1,3 +1,5 @@
+
+
 from occupationcoder.coder import SOCCoder
 import pandas as pd
 import os
@@ -56,13 +58,13 @@ def clean_data(file_path: str):
     # print(df)
 
     # Random Sample
-    df = df.sample(frac = 0.00001)
-    df.head()
-    index = df.index
-    obs=len(index)
-    # print(obs)
+    #df = df.sample(frac = 0.001)
+    #df.head()
+    #index = df.index
+    #obs=len(index)
+    #print(obs)
 
-    df = df.replace(np.nan, '', regex=True)
+    #df = df.replace(np.nan, '', regex=True)
 
     # Cleaning all Texts
     df['job_title'] = df['job_title'].apply(clean_html)
@@ -115,14 +117,3 @@ if __name__ == "__main__":
     df.to_csv(output_file_path, index=False)
 
     print(f'File Saved in {output_file_path}')
-
-#Run this on terminal
-#Structure:
-#python main.py <input_file_path> <output_file_path> <title_column> <sector_column> <description_column>
-
-#Input:
-
-#python new_main.py '/Users/Gabriela/Dropbox/PK_FLFP/Data/Rozee/finals/jobs_py.dta' '/Users/Gabriela/Dropbox/PK_FLFP/Data/Rozee/finals/jobs_py_withcode.csv' 'job_title' 'job_sector' 'job_description'
-
-#python new_main.py '/Users/Gabriela/Dropbox/PK_FLFP/Data/Rozee/finals/jobs_py.dta' '/Users/Gabriela/Dropbox/PK_FLFP/Data/Rozee/finals/jobs_py_withcode.csv'
-
